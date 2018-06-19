@@ -65,4 +65,6 @@ if __name__ == '__main__':
 		except FileExistsError:
 			print("File already exists")
 	# print("--- %s seconds ---" % (time.time() - start_time))
+	time = time.time() - start_time
+	print(time)
 	print("Finished with", str(time.time() - start_time)[0:3], "Sec.")
