@@ -49,11 +49,16 @@ if __name__ == '__main__':
 		# name = yt[0].default_filename
 		#print(name, "will save here:", path)
 	else:
-		path = os.path.join(os.getcwd(), "Download")
+
+		path = os.path.join(os.getcwd(), "Downloads")
 		# print(name, "will save here:", path)
 	
 	print("Downloading...")
 	start_time = time.time()
+	try:
+		os.makedirs(os.path.join(os.getcwd(), "Downloads"))
+	except:		
+		pass
 	yt[0].download(path)
 	
 	if namespace.format == "mp3":
