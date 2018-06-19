@@ -40,6 +40,7 @@ def download(link, only_audio=None):
         index = int(input())        
         if isint(index) == True:            
             print("Download is start")
+            os.mkdir(parent_dir)
             foundend_streams[index].download(parent_dir)
             name = foundend_streams[index].default_filename
             new_name = name[:-3] + "mp3"
